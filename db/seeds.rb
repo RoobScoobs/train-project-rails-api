@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# 
+#
 # Run.create([
 #   { user_id: 1, description: 'Fartlek', total_miles: 3.0, total_time: '00:21:21', completion_date: '2016-06-21' },
 #   { user_id: 2, description: 'Endurance', total_miles: 6.0, total_time: '00:55:49', completion_date: '2016-06-23' },
