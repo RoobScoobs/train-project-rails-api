@@ -54,6 +54,6 @@ class RunsController < ApplicationController
     end
 
     def run_params
-      params.require(:run).permit(:description, :total_miles, :total_time, :completion_date)
+      params.require(:run).permit(:user_id, :description, :total_miles, :total_time, :completion_date)
     end
 end
