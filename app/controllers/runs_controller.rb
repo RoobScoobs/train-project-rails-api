@@ -1,10 +1,10 @@
-class RunsController < ApplicationController
+class RunsController < ProtectedController
   before_action :set_run, only: [:show, :update, :destroy]
 
   # GET /runs
   # GET /runs.json
   def index
-    @runs = Run.all
+    @runs = current_user.runs
 
     render json: @runs
   end
@@ -12,16 +12,18 @@ class RunsController < ApplicationController
   # GET /runs/1
   # GET /runs/1.json
   def show
-    render json: @run
+    render json: Run.find(params[:id])
+    # render json: @run
   end
 
   # POST /runs
   # POST /runs.json
   def create
-    @run = Run.new(run_params)
+    @run = current_user.runs.build(run_params)
+    # @run = Run.new(run_params)
 
     if @run.save
-      render json: @run, status: :created, location: @run
+      render json: @run, status: :created, location: @run_params
     else
       render json: @run.errors, status: :unprocessable_entity
     end
@@ -30,10 +32,9 @@ class RunsController < ApplicationController
   # PATCH/PUT /runs/1
   # PATCH/PUT /runs/1.json
   def update
-    @run = Run.find(params[:id])
-
     if @run.update(run_params)
-      head :no_content
+      render json: @run, status: :ok
+      # head :no_content
     else
       render json: @run.errors, status: :unprocessable_entity
     end
@@ -50,10 +51,10 @@ class RunsController < ApplicationController
   private
 
     def set_run
-      @run = Run.find(params[:id])
+      @run = current_user.runs.find(params[:id])
     end
 
     def run_params
-      params.require(:run).permit(:user_id, :description, :total_miles, :total_time, :completion_date)
+      params.require(:run).permit(:description, :total_miles, :total_time, :completion_date)
     end
 end
