@@ -4,7 +4,7 @@ class CreateRuns < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true, null: false
       t.text :description, null: false
       t.decimal :total_miles, null: false
-      t.time :total_time, null: false
+      t.text :total_time, null: false
       t.date :completion_date, null: false
 
       t.timestamps null: false
