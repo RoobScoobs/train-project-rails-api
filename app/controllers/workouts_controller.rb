@@ -1,12 +1,13 @@
-class WorkoutsController < ApplicationController
+class WorkoutsController < ProtectedController
   before_action :set_workout, only: [:show, :update, :destroy]
 
   # GET /workouts
   # GET /workouts.json
   def index
-    @workouts = current_user.workouts
+    @workout = Workout.all
+    # @workout = current_user.workout
 
-    render json: @workouts
+    render json: @
   end
 
   # GET /workouts/1
@@ -18,14 +19,13 @@ class WorkoutsController < ApplicationController
   # POST /workouts
   # POST /workouts.json
   def create
-    @example = current_user.workouts.build(workout_params)
+    @workout = Workout.new(workout_params)
 
-    if @example.save
-      render json: @example, status: :created, location: @example
+    if @workout.save
+      render json: @workout, status: :created, location: @workout
     else
-      render json: @example.errors, status: :unprocessable_entity
+      render json: @workout.errors, status: :unprocessable_entity
     end
-  end
   end
 
   # PATCH/PUT /workouts/1
