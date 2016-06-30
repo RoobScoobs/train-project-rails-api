@@ -15,9 +15,9 @@ curl --include --request POST http://localhost:3000/runs \
     }
 }'
 
-curl --include --request PATCH http://localhost:3000/runs/1 \
+curl --include --request PATCH http://localhost:3000/runs/17 \
 --header "Content-Type: application/json" \
---header "Authorization: Token token"="BAhJIiU1MmJmYTg5OTEwNjMzMjdjOTcxNzFkZDY0NTE4ODNjOAY6BkVG--5761dcf98873f330fbc81a6916ad35dc23f6d046" \
+--header "Authorization: Token token"="BAhJIiUyMWRlY2YwYWZhNDY5NzlmOGVhOGJjZTY1YTgyZmNhZQY6BkVG--0465f3da6cabc784cf7b19858642f1ea65082c3f" \
 --data '{
     "run": {
       "description": "Slow as fuck.",

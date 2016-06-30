@@ -9,7 +9,7 @@ gem 'pg'
 gem 'bcrypt', '~> 3.1.11'
 
 group :production do
-  gem 'rails_12factor', '~> 0.0.3'
+  gem 'rails_12factor'
 end
 
 group :development, :test do

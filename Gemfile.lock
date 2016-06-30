@@ -163,12 +163,15 @@ DEPENDENCIES
   rack-cors
   rails (~> 4.2.6)
   rails-api
-  rails_12factor (~> 0.0.3)
+  rails_12factor
   rb-readline
   rspec (~> 3.4.0)
   rspec-rails (~> 3.4.2)
   spring (~> 1.6.4)
   spring-commands-rspec (~> 1.0.4)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.5

@@ -42,7 +42,7 @@ module TrainRailsApi
     config.middleware.use Rack::Cors do
       allow do
         origins '*'
-        resource '*',
+        resource '/*',
                  headers: :any,
                  methods: [:options, :get,
                            :post, :patch, :put, :delete]
