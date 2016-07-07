@@ -60,7 +60,7 @@ time to move onto the client.
 
 # Relationship Diagram
 
-
+https://cloud.githubusercontent.com/assets/16338632/16668594/aa82bab4-445f-11e6-9a4e-4aeb3db12c6d.jpg
 
 # Future Iterations
 
@@ -73,7 +73,7 @@ be stored.
 
 Moreover, I think it would be awesome to grant certain users the ability to not only
 add more workout programs, but to edit existing ones, almost creating a wikipedia-esque
-site that users can search through for programs that truly fit their needs. 
+site that users can search through for programs that truly fit their needs.
 
 
 # Link To Client Repo
