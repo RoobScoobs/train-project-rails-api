@@ -60,7 +60,7 @@ time to move onto the client.
 
 # Relationship Diagram
 
-https://cloud.githubusercontent.com/assets/16338632/16668594/aa82bab4-445f-11e6-9a4e-4aeb3db12c6d.jpg
+![](https://cloud.githubusercontent.com/assets/16338632/16668594/aa82bab4-445f-11e6-9a4e-4aeb3db12c6d.jpg)
 
 # Future Iterations
 
